@@ -1,0 +1,133 @@
+class ExerciciosUnisinos
+{
+	public String exercicio3(double x,double y){
+		if (x > y){
+			return x+ " é o maior que " + y;
+		}else{
+			return y + " é maior que " + x;
+		}
+	}
+	public static void main(String args[]){
+		Ideone id = new Ideone();
+		
+		System.out.println(id.exercicio3(-500,10));
+	}
+}
+
+// Exercicio 4 
+public String exercicio4(double a,double b,double c){
+		if(a > b && a > c){
+			return a + " é o maior";
+		}else if (b > a && b > c){
+			return b + " é o maior";
+		}else{
+			return c + " é o maior";
+		}
+	}
+//Exercicio 5
+public boolean exercicio5(int k){
+		if(k % 2 == 0 ){
+			return true;
+		}else{
+			return false;
+		}
+	}
+//Exercicio 6 
+public String exercicio6(int x, int y){
+		if (x > y && x % 2 != 0){
+			return x + " é o maior valor impar";
+		}else if (y > x && y % 2 != 0){
+			return y + " é o maior valor impar";
+		}else if (x % 2 == 0 && y % 2 == 0){
+		return (x - 1) + " e " + (y - 1) + " foram transformados em impares pois eram pares.";
+		}else if (x % 2 == 0 && y % 2 != 0){
+			return y + " é o maior valor impar!";
+		}else {
+			return "Hasta la vista baby";
+		}
+	}
+//exercicio7 
+public String exercicio7(int x, int y,int w, int z){
+		if (x % 2 != 0 && y % 2 != 0 && w % 2 != 0 && z % 2 != 0 ){
+			return "Todos os valores são impar.";
+		}else if (x % 2 != 0 && y % 2 != 0 && w % 2 == 0 && z % 2 == 0){
+			return "Somente "+x+" "+y+" são impares";
+		}else if (x % 2 == 0 && y % 2 == 0 && w % 2 != 0 && z % 2 != 0){
+			return "Somente "+w+" "+z+" são impares";
+		}else if (x % 2 != 0 && y % 2 == 0 && w % 2 == 0 && z % 2 == 0){
+			return "Somente "+x+" é impar";
+		}else if (x % 2 == 0 && y % 2 != 0 && w % 2 == 0 && z % 2 == 0){
+			return "Somente "+y+" é impar";
+		}else if (x % 2 != 0 && y % 2 == 0 && w % 2 != 0 && z % 2 == 0){
+			return "Somente "+x+" "+w+" são impares";
+		}else if (x % 2 != 0 && y % 2 == 0 && w % 2 == 0 && z % 2 != 0){
+			return "Somente "+x+" "+z+" são impares";
+		}else if (x % 2 == 0 && y % 2 != 0 && w % 2 != 0 && z % 2 == 0){
+			return "Somente "+y+" "+w+" são impares";
+		}else if (x % 2 == 0 && y % 2 != 0 && w % 2 == 0 && z % 2 != 0){
+			return "Somente "+y+" "+z+" são impares";
+		}else if (x % 2 == 0 && y % 2 == 0 && w % 2 != 0 && z % 2 == 0){
+			return "Somente "+w+ " é impar";
+		}else if (x % 2 == 0 && y % 2 == 0 && w % 2 == 0 && z % 2 != 0){
+			return "Somente "+z+" é impar";
+		}else {
+			return "Errrrrrrrrrrrrou!!";
+		}
+	}
+//exercicio8
+public String exercicio8(int x, int y, int w){
+		if(x % 2 == 0 && y % 2 == 0 && w % 2 == 0){
+			return "A média de "+x+" "+y+" "+w+ " é " + ((x+y+w)/3) + ". Todos os numeros são pares";
+		}else if (x % 2 != 0 && y % 2 == 0 && w % 2 == 0){
+			return "A média de "+y+" "+w+ " é " + ((y+w)/ 2) + ". Somente dois numeros são pares";
+		}else if (x % 2 == 0 && y % 2 != 0 && w % 2 == 0){
+			return "A média de "+x+" "+w+ " é " + ((x+w) / 2) + ". Somente dois numeros são pares";
+		}else if (x % 2 == 0 && y % 2 == 0 && w % 2 != 0){
+			return "A média de "+x+" "+y+ " é " + ((x+y) / 2) + ". Somente dois numeros são pares";
+		}else if (x % 2 != 0 && y % 2 != 0 && w % 2 == 0){
+			return "A média de "+w+ " é " + ((w) / 1) + ". Somente um numero é par";
+		}else if (x % 2 != 0 && y % 2 == 0 && w % 2 != 0){
+			return "A média de "+y+ " é " + ((y)/ 1) + ". Somente um numero é par";
+		}else if (x % 2 == 0 && y % 2 != 0 && w % 2 != 0){
+			return "A média de "+x+ " é " + ((x) / 1) + ". Somente um numero é par";
+		}
+		else{
+			return "errrrrrrrou!";
+		}
+	}
+//exercicio9
+public String exercicio9(double x,double y){
+		if (x > 0 && y > 0){
+			return "A soma de "+x+" "+y+" "+(x+y);
+		}else if(x > 0 || y > 0){
+			return "A soma de "+x+" "+y+" "+(x+y);
+		}else{
+			return "Os dois números são negativos";
+		}
+	}
+public static void main(String args[]){
+		ExerciciosUnisinos id = new ExerciciosUnisinos();
+		ExerciciosUnisinos id1 = new ExerciciosUnisinos();
+		ExerciciosUnisinos id2 = new ExerciciosUnisinos();
+		ExerciciosUnisinos id3 = new ExerciciosUnisinos();
+		ExerciciosUnisinos id4 = new ExerciciosUnisinos();
+		ExerciciosUnisinos id5 = new ExerciciosUnisinos();
+		ExerciciosUnisinos id6 = new ExerciciosUnisinos();
+		
+		System.out.println("\n Exercicio 3 ");
+		System.out.println(id.exercicio3(-500,10));
+		System.out.println("\n Exercicio 4 ");
+		System.out.println(id1.exercicio4(-100000,500,5000));
+		System.out.println("\n Exercicio 5 ");
+		System.out.println(id2.exercicio5(153));
+		System.out.println(id2.exercicio5(1152));
+		System.out.println("\n Exercicio 6 ");
+		System.out.println(id3.exercicio6(62,63));
+		System.out.println("\n Exercicio 7");
+		System.out.println(id4.exercicio7(62,62,-502,53));
+		System.out.println("\n Exercicio 8");
+		System.out.println(id5.exercicio8(663,63,52));
+		System.out.println("\n Exercicio 9");
+		System.out.println(id6.exercicio9(663,-6663.52));
+	}
+}
