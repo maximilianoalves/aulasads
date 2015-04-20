@@ -75,6 +75,7 @@ class Viagem
 	{
 		Viagem v = new Viagem(1,34,1);
 		
+		//testes
 		System.out.println(v.isIdoso(59));
 		System.out.println(v.vendeUmLugar(61));
 	}
