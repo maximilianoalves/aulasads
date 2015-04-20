@@ -1,0 +1,81 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Viagem
+{
+	private int numViagem;
+	private double valorPassagem;
+	private int lotacaoMaxima;
+	private double lugaresVendidos;
+	private double totalArrecadado;
+	
+	public int getNumViagem(){
+		return numViagem;
+	}
+	public void setNumViagem(int numViagem){
+		this.numViagem = numViagem;
+	}
+	public double getValorPassagem(){
+		return valorPassagem;
+	}
+	public void setValorPassagem (double valorPassagem){
+		this.valorPassagem = valorPassagem;
+	} 
+	public int getLotacaoMaxima(){
+		return lotacaoMaxima;
+	}
+	public void setLotacaoMaxima(int lotacaoMaxima){
+		this.lotacaoMaxima = lotacaoMaxima;
+	}
+	//get e set double lugaresVendidos
+	public double getLugaresVendidos(){
+		return lugaresVendidos;
+	}
+	public void setLugaresVendidos(double lugaresVendidos){
+		this.lugaresVendidos = lugaresVendidos;
+	}
+	//get e set double totalArrecadado
+	public double getTotalArrecadado(){
+		return totalArrecadado;
+	}
+	public void setTotalArrecadado(double totalArrecadado){
+		this.totalArrecadado = totalArrecadado;
+	}
+	public Viagem(int numViagem,double valorPassagem,int lotacaoMaxima){
+		this.numViagem = numViagem;
+		this.valorPassagem = valorPassagem;
+		this.lotacaoMaxima = lotacaoMaxima;
+		this.lugaresVendidos = 0;
+		this.totalArrecadado = 0;
+	}
+	public boolean isIdoso(int idade){
+		if(idade >= 60){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public double vendeUmLugar(int idade){
+		if(lugaresVendidos == lotacaoMaxima){
+			System.out.println("0");
+		}else{
+			isIdoso(idade);
+			if(isIdoso(idade) == true){
+				valorPassagem = valorPassagem / 2;
+			}
+		}
+		return valorPassagem;
+	}
+	
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Viagem v = new Viagem(1,34,1);
+		
+		System.out.println(v.isIdoso(59));
+		System.out.println(v.vendeUmLugar(61));
+	}
+}
