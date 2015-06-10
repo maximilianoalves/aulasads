@@ -1,0 +1,55 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class PesquisaEmUmArray
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//Classe Scanner para pegar os dados
+		Scanner scan = new Scanner(System.in);
+		//cria o array para guardar os contatos da agenda
+		String[] agenda = new String[10];
+		//cria o array para guardar os resultados das buscas
+		String[] busca = new String[agenda.length];
+		//popula o array de contatos
+		agenda[0] = "Maximiliano";
+		agenda[1] = "Angela";
+		agenda[2] = "Max";
+		agenda[3] = "Mario";
+		agenda[4] = "Mariana";
+		agenda[5] = "Vinicius";
+		agenda[6] = "Giovanna";
+		agenda[7] = "Ronaldo";
+		agenda[8] = "Roberto";
+		agenda[9] = "Reginaldo";
+		//imprime o cabeçalho do relatório.
+		System.out.print("Contatos da agenda: ");
+		//imprime o array inteiro
+		for(int i = 0; i < agenda.length ; i++ ){
+		System.out.print(agenda[i] + ", "); 
+		}
+		//pula uma linha
+		System.out.println("");
+		//imprime orientação para entrada do nome
+		System.out.print("Adicione o nome para pesquisa: ");
+		//chama a classe scan para digitar a string
+		String pesquisa = scan.next();
+		//cria o algoritmo de pesquisa
+		for(int i = 0; i < agenda.length; i++){
+			if (agenda[i].contains(pesquisa)){
+				busca[i] = agenda[i];
+			}
+		}
+		//pula uma linha
+		System.out.println("");
+		//imprime o cabeçalho do relatório.
+		System.out.print("Vocês Pesquisou por: " + pesquisa + "\n" +"E o resultado da busca é: ");
+		//imprime o array busca, excluindo o que é null
+		for(int i = 0; i < agenda.length; i++){
+			if(busca[i] != null)
+			System.out.print(busca[i] + ", ");
+		}
+	}
+}
