@@ -35,10 +35,15 @@ class RetornaMaior
 			if(contaNomes > contaCount){
 				result = contaNomes;
 				recebeNome = nomes[i];
+			}else if(contaNomes == contaCount){
+				String nomeIgual = "n";
+				nomeIgual = nomes[i];
+				System.out.println("Existem nomes com o mesmo tamanho: " + nomeIgual);
 			}
 		}
 		//imprime na tela os resultados
-		System.out.println("Seu maior nome é: " + recebeNome + " com tamanho de: " + result);
+		System.out.println("Seu maior nome é: " + recebeNome);
+		System.out.println("Tamanho nome(s): " + result);
 	}
 	
 	
