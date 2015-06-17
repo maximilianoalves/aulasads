@@ -1,0 +1,51 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class RetornaMaior
+{
+	String[] nomes;
+	
+	public RetornaMaior(){
+		this.nomes = new String[10];
+	}
+	//metodo para preencher o array com nomes via teclado
+	public void preencheArray(){
+		Scanner scan = new Scanner(System.in);
+		for(int i = 0; i < nomes.length; i++){
+			if(nomes[i] == null){
+				nomes[i] = scan.next();
+			}
+		}
+	}
+	// metodo para retornar o maior nome
+	public void retornaMaior(){
+		//variavel para armazenar o maior nome.
+		String recebeNome = "n";
+		//variavel para armazenar o soma das letas do maior nome
+		int result = 0;
+		//for para percorrer o array
+		for(int i = 0; i < nomes.length; i++){
+			//contar a quantidade de letras que tem o nome na posição i do array
+			int contaNomes = nomes[i].length();
+			// contar a quantidade de letras que tem a variavel que está armazenando o maior nome
+			int contaCount = recebeNome.length();
+			//verificação se o nome que está no array na posição i é maior do que o que está armazenado.
+			if(contaNomes > contaCount){
+				result = contaNomes;
+				recebeNome = nomes[i];
+			}
+		}
+		//imprime na tela os resultados
+		System.out.println("Seu maior nome é: " + recebeNome + " com tamanho de: " + result);
+	}
+	
+	
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		RetornaMaior id = new RetornaMaior();
+		id.preencheArray();
+		id.retornaMaior();
+	}
+}
